@@ -1,37 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CTFtime.org: upcoming CTF events</title><link>https://ctftime.org/event/list/upcoming/rss/</link><description>CTFtime.org upcoming CTF events feed.</description><atom:link href="https://ctftime.org/event/list/upcoming/rss/" rel="self"></atom:link><language>en-us</language><lastBuildDate>Tue, 24 Jul 2018 17:32:39 -0000</lastBuildDate><item>
-<title>ISITDTU CTF 2018 Quals</title><link>https://ctftime.org/event/642</link><description>
-Name: ISITDTU CTF 2018 Quals (an <a href="/ctf/258">ISITDTU CTF</a> event.)<br/>
-Date: July 28, 2018, 1 a.m. — 28 July 2018, 19:00 UTC  <a href="/event/642.ics">[add to calendar]</a><br/>
-Format: Jeopardy<br/>
-<b>On-line</b><br/>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+    <title>CTFtime.org: upcoming CTF events</title>
+    <link>https://ctftime.org/event/list/upcoming/rss/</link>
+    <description>CTFtime.org upcoming CTF events feed.</description>
+    <atom:link href="https://ctftime.org/event/list/upcoming/rss/" rel="self"></atom:link>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Jul 2018 17:32:39 -0000</lastBuildDate>
+    <item>
+        <title>ISITDTU CTF 2018 Quals</title>
+        <link>https://ctftime.org/event/642</link>
+        <description>
+            Name: ISITDTU CTF 2018 Quals (an <a href="/ctf/258">ISITDTU CTF</a> event.)<br/>
+            Date: July 28, 2018, 1 a.m. — 28 July 2018, 19:00 UTC  <a href="/event/642.ics">[add to calendar]</a><br/>
+            Format: Jeopardy<br/>
+            <b>On-line</b><br/>
 
-Offical URL: <a href="https://ctf.isitdtu.com/" rel="nofollow">https://ctf.isitdtu.com/</a><br/>
-Rating weight: 0.00<br/>
+            Offical URL: <a href="https://ctf.isitdtu.com/" rel="nofollow">https://ctf.isitdtu.com/</a><br/>
+            Rating weight: 0.00<br/>
 
-Event organizers: 
+            Event organizers: 
 
-<a href="/team/8241">ISITDTU</a> 
-
-
-</description><guid>https://ctftime.org/event/642</guid><start_date>20180728T010000</start_date><finish_date>20180728T1~^90000</finish_date><logo_url></logo_url><url>https://ctf.isitdtu.com/</url><ctftime_url>/event/642</ctftime_url><format>1</format><format_text>Jeopardy</format_text><public_votable>True</public_votable><weight>0.00</weight><live_feed></live_feed><restrictions>Open</restrictions><location></location><onsite>False</onsite><organizers>[{"id": 8241, "name": "ISITDTU"}]</organizers><ctf_id>258</ctf_id><ctf_name>ISITDTU CTF</ctf_name></item>
-
-
-<item><title>Real World CTF 2018 Quals</title><link>https://ctftime.org/event/645</link><description>
-Name: Real World CTF 2018 Quals (an <a href="/ctf/260">Real World CTF</a> event.)<br/>
-Date: July 28, 2018, 2 a.m. — 30 July 2018, 02:00 UTC  <a href="/event/645.ics">[add to calendar]</a><br/>
-Format: Jeopardy<br/>
-<b>On-line</b><br/>
-
-Offical URL: <a href="https://realworldctf.com/" rel="nofollow">https://realworldctf.com/</a><br/>
-Rating weight: 0.00<br/>
-
-Event organizers: 
-
-<a href="/team/60371">Chaitin Tech</a> 
+            <a href="/team/8241">ISITDTU</a> 
 
 
-</description><guid>https://ctftime.org/event/645</guid><start_date>20180728T020000</start_date><finish_date>20180730T020000</finish_date><logo_url>/media/events/logo150.jpg</logo_url><url>https://realworldctf.com/</url><ctftime_url>/event/645</ctftime_url><format>1</format><format_text>Jeopardy</format_text><public_votable>True</public_votable><weight>0.00</weight><live_feed></live_feed><restrictions>Open</restrictions><location></location><onsite>False</onsite><organizers>[{"id": 60371, "name": "Chaitin Tech"}]</organizers><ctf_id>260</ctf_id><ctf_name>Real World CTF</ctf_name></item><item><title>CODE BLUE CTF 2018 Quals</title><link>https://ctftime.org/event/636</link><description>
+        </description>
+        <guid>https://ctftime.org/event/642</guid>
+        <start_date>20180728T010000</start_date>
+        <finish_date>20180728T1~^90000</finish_date>
+        <logo_url></logo_url>
+        <url>https://ctf.isitdtu.com/</url>
+        <ctftime_url>/event/642</ctftime_url>
+        <format>1</format>
+        <format_text>Jeopardy</format_text>
+        <public_votable>True</public_votable>
+        <weight>0.00</weight>
+        <live_feed></live_feed>
+        <restrictions>Open</restrictions>
+        <location></location>
+        <onsite>False</onsite>
+        <organizers>[{"id": 8241, "name": "ISITDTU"}]</organizers>
+        <ctf_id>258</ctf_id>
+        <ctf_name>ISITDTU CTF</ctf_name>
+    </item>
+
+
+    <item>
+        <title>Real World CTF 2018 Quals</title>
+        <link>https://ctftime.org/event/645</link>
+        <description>
+            Name: Real World CTF 2018 Quals (an <a href="/ctf/260">Real World CTF</a> event.)<br/>
+            Date: July 28, 2018, 2 a.m. — 30 July 2018, 02:00 UTC  <a href="/event/645.ics">[add to calendar]</a><br/>
+            Format: Jeopardy<br/>
+            <b>On-line</b><br/>
+
+            Offical URL: <a href="https://realworldctf.com/" rel="nofollow">https://realworldctf.com/</a><br/>
+            Rating weight: 0.00<br/>
+
+            Event organizers: 
+
+            <a href="/team/60371">Chaitin Tech</a> 
+
+
+        </description>
+        <guid>https://ctftime.org/event/645</guid>
+        <start_date>20180728T020000</start_date>
+        <finish_date>20180730T020000</finish_date>
+        <logo_url>/media/events/logo150.jpg</logo_url>
+        <url>https://realworldctf.com/</url>
+        <ctftime_url>/event/645</ctftime_url>
+        <format>1</format>
+        <format_text>Jeopardy</format_text>
+        <public_votable>True</public_votable>
+        <weight>0.00</weight>
+        <live_feed></live_feed>
+        <restrictions>Open</restrictions>
+        <location></location>
+        <onsite>False</onsite>
+        <organizers>[{"id": 60371, "name": "Chaitin Tech"}]</organizers>
+        <ctf_id>260</ctf_id>
+        <ctf_name>Real World CTF</ctf_name>
+    </item>
+<item><title>CODE BLUE CTF 2018 Quals</title><link>https://ctftime.org/event/636</link><description>
 Name: CODE BLUE CTF 2018 Quals (an <a href="/ctf/208">CODE BLUE CTF</a> event.)<br/>
 Date: July 28, 2018, 11 a.m. — 29 July 2018, 11:00 UTC  <a href="/event/636.ics">[add to calendar]</a><br/>
 Format: Jeopardy<br/>
