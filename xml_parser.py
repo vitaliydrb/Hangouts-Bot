@@ -3,9 +3,10 @@ import httplib2
 from ctf import CTF
 
 
-def get_rss():
+#This function getting rss from list in settings.py
+def get_events_from_rss(link):
     req = httplib2.Http()
-    (headers, content) = req.request('https://ctftime.org/event/list/upcoming/rss/', 'GET')
+    (headers, content) = req.request('{}'.format(link), 'GET')
     if headers['status'] == '200':
         xml = parse_rss(content)
         root = ET.fromstring(xml)
@@ -13,6 +14,7 @@ def get_rss():
         return get_ctf_list(root)
 
 
+#This function removes unreadable html symbols
 def parse_rss(content):
     content.replace('&lt;', '<')
     content.replace('&gt;','>')
@@ -21,6 +23,7 @@ def parse_rss(content):
     content.replace('ndash;','-')
     content.replace('&nbsp;',' ')
     return content
+
 
 
 def get_ctf_list(xml):
