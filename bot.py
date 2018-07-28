@@ -1,10 +1,11 @@
 from httplib2 import Http
 from json import dumps
-from settings import hook
-from xml_parser import get_rss
+from settings import hook, link
+from xml_parser import get_events_from_rss
 
 
 def send_message(event):
+    #This is message constructor.
     bot_message = {
   "cards": [
     {
@@ -67,6 +68,7 @@ def send_message(event):
         return True
 
 if __name__ == '__main__':
-    events = get_rss()
+    #This will parse events from rss list.
+    events = get_events_from_rss(link)
     for event in events:
         send_message(event)
