@@ -2,6 +2,7 @@ import datetime
 from dateutil import parser
 
 
+#Thiss class will create object for each event.
 class CTF(object):
 
 
@@ -10,7 +11,9 @@ class CTF(object):
         self.link = link
         self.beginning = beginning
         self.date = parser.parse(self.beginning)
-            
+
+
+#This function will check if event will begin in ~3 weeks.
     def get_eta(self):        
         if self.date.year == datetime.date.today().year:
             if datetime.date.today().day < 30:
