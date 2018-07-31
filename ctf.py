@@ -10,14 +10,12 @@ class CTF(object):
         self.name = name
         self.link = link
         self.beginning = beginning
-        self.date = parser.parse(self.beginning)
+        self.datetime = parser.parse(self.beginning)
+        self.date = self.datetime.date
 
 
 #This function will check if event will begin in ~3 weeks.
-    def get_eta(self):        
-        if self.date.year == datetime.date.today().year:
-            if datetime.date.today().day < 30:
-                if self.date.month == datetime.date.today().month:
-                    return True
-                elif (self.date.month -1 == datetime.date.today().month) and (self.date.date < 16):
-                    return True
+    def get_eta(self):
+        three_weeks = datetime.timedelta(days = 7)
+        if (self.date <= datetime.date.today() + three_weeks) and self.date >= datetime.date.today():
+            pass
