@@ -10,7 +10,6 @@ def get_events_from_rss(link):
     if headers['status'] == '200':
         xml = parse_rss(content)
         root = ET.fromstring(xml)
-        print root
         return get_ctf_list(root)
 
 
