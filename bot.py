@@ -9,52 +9,53 @@ import time
 def send_message(event):
     #This is message constructor.
     bot_message = {
-  "cards": [
+    "cards": [
     {
-      "header": {
-        "title": "CTF bot for hangours",
-        "subtitle": "vim@underdefense.com",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0-dyErI37wFNzHw_V6mtPiVy07TS4a77Toh9rSqpR10KCWzr"
+        "header": {
+            "title": "CTF bot for hangours",
+            "subtitle": "vim@underdefense.com",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0-dyErI37wFNzHw_V6mtPiVy07TS4a77Toh9rSqpR10KCWzr"
       },
-      "sections": [
+        "sections": [
         {
-          "widgets": [
-              {
-                "keyValue": {
-                  "topLabel": "Event name",
-                  "content": "{}".format(event.name)
-                  }
-              },
-              {
-                "keyValue": {
-                  "topLabel": "Beggining date:",
-                  "content": "{}".format(event.date)
+            "widgets": [
+                {
+                    "keyValue": {
+                        "topLabel": "Event name",
+                        "content": "{}".format(event.name)
+                    }
+                },
+                {
+                    "keyValue": {
+                        "topLabel": "Beggining date:",
+                        "content": "{}".format(event.date)
+                    }
                 }
-              }
-          ]
+            ]
         },
         {
-          "widgets": [
-              {
-                  "buttons": [
+            "widgets": [
+                {
+                    "buttons": [
                     {
-                      "textButton": {
-                        "text": "Open website",
-                        "onClick": {
-                          "openLink": {
-                            "url": "{}".format(event.link)
-                          }
+                        "textButton": {
+                            "text": "Open website",
+                            "onClick": {
+                                "openLink": {
+                                    "url": "{}".format(event.link)
+                                }
+                            }
                         }
-                      }
                     }
-                  ]
-              }
-          ]
+                    ]
+                }
+            ]
         }
-      ]
+        ]
     }
-  ]
+    ]
 }
+
     message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
 
     http_obj = Http()
@@ -97,7 +98,7 @@ if __name__ == '__main__':
                     thread = send_message(event)
                     if thread:
                         add_item(event, thread)
-    for item in get_upcoming_events():
-        remind_about_event(item.thread)
+        for item in get_upcoming_events():
+            remind_about_event(item.thread)
     #24 hours
-    time.sleep(60*60*24)
+        time.sleep(60*60*24)
