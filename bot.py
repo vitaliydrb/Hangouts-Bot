@@ -1,7 +1,9 @@
 from httplib2 import Http
-from json import dumps
-from settings import hook, link
+from json import dumps, loads
+from settings import hook, rss_list
 from xml_parser import get_events_from_rss
+from database import add_item, get_upcoming_events, is_unique
+import time
 
 
 def send_message(event):
@@ -53,7 +55,6 @@ def send_message(event):
     }
   ]
 }
-
     message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
 
     http_obj = Http()
@@ -65,10 +66,38 @@ def send_message(event):
         body=dumps(bot_message),
     )
     if response[0]['status'] == "200":
+        return loads(response[1])['thread']["name"]
+
+
+def remind_about_event(thread):
+    bot_message = {
+        'message' : 'Reminder. This event will begin soon!',
+        'thread' : thread
+    }
+    message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
+
+    http_obj = Http()
+
+    response = http_obj.request(
+        uri=hook,
+        method='POST',
+        headers=message_headers,
+        body=dumps(bot_message),
+    )
+    if response[0]['status'] == '200':
         return True
 
+
 if __name__ == '__main__':
-    #This will parse events from rss list.
-    events = get_events_from_rss(link)
-    for event in events:
-        send_message(event)
+    while True:
+        for link in rss_list:
+            events = get_events_from_rss(link)
+            for event in events:
+                if is_unique(event):
+                    thread = send_message(event)
+                    if thread:
+                        add_item(event, thread)
+    for item in get_upcoming_events():
+        remind_about_event(item.thread)
+    #24 hours
+    time.sleep(60*60*24)
