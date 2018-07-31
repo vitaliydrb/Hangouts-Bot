@@ -18,4 +18,4 @@ class CTF(object):
     def get_eta(self):
         three_weeks = datetime.timedelta(days = 7)
         if (self.date <= datetime.date.today() + three_weeks) and self.date >= datetime.date.today():
-            pass
+            return True
