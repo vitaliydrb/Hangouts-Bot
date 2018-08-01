@@ -1,4 +1,4 @@
-#Here is url-link for rss
-link = 'https://ctftime.org/event/list/upcoming/rss/'
+#Here is url-links for rss
+rss_list = ['https://ctftime.org/event/list/upcoming/rss/']
 #Here is hangouts chat webhook
 hook = ''
