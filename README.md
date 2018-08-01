@@ -1,4 +1,4 @@
-# This is bot for notifying about CTF Events
+# This is bot which notifying about CTF Events
 
 Configuration:
 
