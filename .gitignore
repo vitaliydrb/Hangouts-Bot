@@ -1,0 +1,14 @@
+
+.DS_Store
+.vscode/settings.json
+__pycache__/ctf.cpython-37.pyc
+__pycache__/database.cpython-37.pyc
+__pycache__/settings.cpython-37.pyc
+__pycache__/xml_parser.cpython-37.pyc
+ctf.pyc
+ctfs.db
+database.pyc
+settings.pyc
+xml_parser.pyc
+settings.py
+Project_Vision
