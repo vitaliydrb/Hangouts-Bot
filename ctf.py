@@ -16,6 +16,6 @@ class CTF(object):
 
 #This function will check if event will begin in ~3 weeks.
     def get_eta(self):
-        three_weeks = datetime.timedelta(days = 7)
+        three_weeks = datetime.timedelta(days = 21)
         if (self.date <= datetime.date.today() + three_weeks) and self.date >= datetime.date.today():
             return True
