@@ -15,12 +15,12 @@ def get_events_from_rss(link):
 
 #This function removes unreadable html symbols
 def parse_rss(content):
-    content.replace('&lt;', '<')
-    content.replace('&gt;','>')
-    content.replace('&amp;','&')
-    content.replace('mdash;','-')
-    content.replace('ndash;','-')
-    content.replace('&nbsp;',' ')
+    content.replace(b'&lt;', b'<')
+    content.replace(b'&gt;',b'>')
+    content.replace(b'&amp;',b'&')
+    content.replace(b'mdash;',b'-')
+    content.replace(b'ndash;',b'-')
+    content.replace(b'&nbsp;',b' ')
     return content
 
 

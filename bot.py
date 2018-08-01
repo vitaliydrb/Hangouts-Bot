@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 from httplib2 import Http
 from json import dumps, loads
 from settings import hook, rss_list
@@ -95,7 +95,7 @@ if __name__ == '__main__':
         for link in rss_list:
             events = get_events_from_rss(link)
             for event in events:
-                if is_unique(event):
+                if is_unique(event.name):
                     thread = send_message(event)
                     if thread:
                         add_item(event, thread)
