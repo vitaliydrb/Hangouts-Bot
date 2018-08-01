@@ -6,5 +6,7 @@ Configuration:
 
 Usage:
 
-```chmod +x ./bot.py
-./bot.py```
+```bash
+chmod +x ./bot.py
+./bot.py
+```
