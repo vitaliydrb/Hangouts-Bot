@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from httplib2 import Http
 from json import dumps, loads
 from settings import hook, rss_list
