@@ -45,7 +45,7 @@ def add_item(ctf, thread):
 #This function will return list of events, should be reminded
 def get_upcoming_events():
     tomorrow = datetime.date.today() + datetime.timedelta(days = 1)
-    items = session.query(Events).filter(Events.date == (tomorrow))
+    items = session.query(Events).filter(Events.date == (tomorrow)).all()
     return items
 
 
