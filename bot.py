@@ -73,9 +73,9 @@ def send_message(event):
 
 def remind_about_event(thread):
     bot_message = {
-        'message' : 'Reminder. This event will begin soon!',
-        'thread' : thread
+        'text' : 'Reminder. This event will begin soon!',
     }
+    bot_message['thread'] = {"name" : thread}
     message_headers = {'Content-Type': 'application/json; charset=UTF-8'}
 
     http_obj = Http()
@@ -100,6 +100,7 @@ if __name__ == '__main__':
                     if thread:
                         add_item(event, thread)
         for item in get_upcoming_events():
-            remind_about_event(item.thread)
+            if item.thread:
+                remind_about_event(item.thread)
     #24 hours
         time.sleep(60*60*24)
