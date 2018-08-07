@@ -13,7 +13,7 @@ def send_message(event):
     "cards": [
     {
         "header": {
-            "title": "CTF bot for hangours",
+            "title": "CTF bot for hangouts",
             "subtitle": "vim@underdefense.com",
             "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg0-dyErI37wFNzHw_V6mtPiVy07TS4a77Toh9rSqpR10KCWzr"
       },
